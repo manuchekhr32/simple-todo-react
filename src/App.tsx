@@ -11,7 +11,7 @@ function App() {
     if (!storedJSON) {
       localStorage.setItem("todos", JSON.stringify([]));
     }
-    const storedData = JSON.parse(storedJSON!);
+    const storedData = JSON.parse(storedJSON || "[]") || [];
     return storedData;
   });
 
